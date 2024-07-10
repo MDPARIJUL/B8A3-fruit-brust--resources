@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DaisyUI Carousel</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      plugins: [require('daisyui')],
-    }
-  </script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.14.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Horizontally center the column */
+            align-items: center;   /* Vertically center the column */
+        }
+        .team-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .team-member {
+            margin: 20px 0;
+        }
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .team-member h3 {
+            margin: 10px 0 5px 0;
+        }
+        .team-member p {
+            margin: 0;
+        }
+    </style>
+    <title>Team Section</title>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-  <div class="carousel w-full max-w-md mx-auto">
-    <div id="slide1" class="carousel-item relative w-full">
-      <img src="https://placekitten.com/800/400" class="w-full" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide3" class="btn btn-circle">❮</a> 
-        <a href="#slide2" class="btn btn-circle">❯</a>
-      </div>
-    </div> 
-    <div id="slide2" class="carousel-item relative w-full">
-      <img src="https://placekitten.com/801/400" class="w-full" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide1" class="btn btn-circle">❮</a> 
-        <a href="#slide3" class="btn btn-circle">❯</a>
-      </div>
-    </div> 
-    <div id="slide3" class="carousel-item relative w-full">
-      <img src="https://placekitten.com/802/400" class="w-full" />
-      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href="#slide2" class="btn btn-circle">❮</a> 
-        <a href="#slide1" class="btn btn-circle">❯</a>
-      </div>
+<body>
+    <div class="team-column">
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Awlad Hossain">
+            <h3>Awlad Hossain</h3>
+            <p>Fruits Expert</p>
+            <div>
+                <a href="#"><img src="https://via.placeholder.com/24" alt="Social Icon"></a>
+                <a href="#"><img src="https://via.placeholder.com/24" alt="Social Icon"></a>
+                <a href="#"><img src="https://via.placeholder.com/24" alt="Social Icon"></a>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Safia Chowdhury">
+            <h3>Safia Chowdhury</h3>
+            <p>Team Member</p>
+        </div>
     </div>
-  </div>
 </body>
 </html>
